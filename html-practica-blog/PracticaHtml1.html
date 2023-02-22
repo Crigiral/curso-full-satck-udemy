@@ -8,6 +8,26 @@
     <title>Cristian Giraldo Programer</title>
 </head>
 
+<style>
+    input {
+        width: 100%; /* determina que estará al 100% (si está al 100%) del ancho de la página u otro porcentaje definido*/
+        padding: 8px 4px;/*alto y ancho*/
+        box-sizing: border-box;/*determina que el ancho del input será siempre del tamaño de la página incluyendo el padding*/        
+        margin: 15px 0px;/*vertical y horizontal*/
+        border: 2px solid rgb(1, 6, 27);
+        border-radius: 5px;
+        background-color: rgb(246, 246, 252);
+        color: rgb(3, 36, 82);
+    }
+    input:focus {
+        background-color: rgba(121, 193, 238, 0.868); 
+        border: 2px rgb(2, 77, 97) ;
+    }
+    ::placeholder {
+        color: rgb(8, 141, 198);
+    }
+</style>
+
 <body>
     <a href="#Social media">Go to social media</a>
 
@@ -55,27 +75,29 @@
                 I really enjoy the any lookout, my city has a lot of lookouts that i
                 like to go.
             </li>
-            <li>Eat :)!</li>
+            <li>I love the food and beer :)!</li>
         </ol>
     </header>
     <header>
         <h4>Would you like to contact with me? Let me know who you are:</h4>
         
-        <form method="post" enctype="multipart/form-data">
+        <div>
+        <form action="http://localhost:3000/" method="post" enctype="multipart/form-data">
             <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname"><br><br>
+            <input type="text" id="fname" name="fname" placeholder="Put your first name here">
             <label for="lname">Last name:</label>
-            <input type="text" id="lname" name="lname"><br><br>
-            <label for="tellme">Tell me something obout you:</label><br><br>
-            <input type="text" id="tellme" name="tellme"><br><br>
+            <input type="text" id="lname" name="lname" placeholder="Put your last name here">
+            <label for="tellme">Tell me something obout you:</label>
+            <input type="text" id="tellme" name="tellme" placeholder="Write something about yourself">
             <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email"><br><br>
-            <label for="file">Send me a photo if you want:</label><br><br>
-            <!--I should take a look to input type image i tried to use it but it doesn´t work
+            <input type="email" id="email" name="email" placeholder="Put your email here">
+            <label for="file">Send me a photo if you want:</label>
+            <!--I should take a look to input type "image" i tried to use it but it doesn´t work
             so i decide to use file type-->
-            <input type="file" id="file" name="file"><br><br>
+            <input type="file" id="file" name="file" placeholder="You can upload a selfie">
             <button type="submit">Enviar</button>
         </form>
+        </div>
     </header>
 
     <footer>
